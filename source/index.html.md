@@ -9,7 +9,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
 
 toc_footers:
   - <a href='https://harth-und-wolff.de/account/api'>Sign Up for a Developer Key</a>
-  - <a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a>
+  - <a href='https://harth-und-wolff.de/unternehmen/impressum'>Impressum</a>
 
 search: true
 
@@ -17,17 +17,14 @@ code_clipboard: true
 
 meta:
   - name: description
-    content: Documentation for the Kittn API
+    content: Documentation for the API
 ---
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Herzlich Willkomen in den Docs der API der Harth und Wolff.
 
-We have language bindings in Shell, PHP, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
-
-This example API documentation page was created with [Slate](https://github.com/slatedocs/slate). Feel free to edit it and use it as a base for your own API's documentation.
-
+Wir freuen uns, dass Sie sich für unsere API interessieren. 
 # Authentication
 
 > To authorize, use this code:
