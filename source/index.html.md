@@ -25,6 +25,11 @@ meta:
 Herzlich Willkomen in den Docs der API der Harth und Wolff.
 
 Wir freuen uns, dass Sie sich für unsere API interessieren. 
+
+Bei ungeklärten Fragen, melden Sie sich gerne hier:
+Robin Wolff
+r.wolff@harth-und-wolff.de
+
 # Authentication
 
 > To authorize, use this code:
