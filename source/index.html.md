@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: HuW-API-Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
@@ -22,7 +22,7 @@ meta:
 
 # Introduction
 
-Herzlich Willkomen in den Docs der API der Harth und Wolff.
+Herzlich Willkomen in den Docs der API der Harth & Wolff.
 
 Wir freuen uns, dass Sie sich für unsere API interessieren. 
 
@@ -60,6 +60,10 @@ r.wolff@harth-und-wolff.de
       "250": 0.00,
       "500": 5.00,
       "1000": 10.00
+    },
+    "ip": {
+      "4": 0.90,
+      "6": 0.00
     }
   }
 ]
@@ -69,34 +73,20 @@ r.wolff@harth-und-wolff.de
 
 ### HTTP Request
 
-`GET http://api.harth-und-wolff.de/v1/kvm/getPrices`
+`GET https://api.harth-und-wolff.de/v1/kvm/getPrices`
 
 ## Order a Server
 
 ```php
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
 ```
 
 ```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
 ```
 
 ```shell
-curl "http://example.com/api/kittens/2" \
-  -H "Authorization: meowmeowmeow"
 ```
 
 ```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
 ```
 
 > The above command returns JSON structured like this:
@@ -104,54 +94,54 @@ let max = api.kittens.get(2);
 ```json
 {
   "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
+  "config": {
+    "rescourcen": {
+      "ram": 4,
+      "core": 1,
+      "storage": 20,
+      "traffic": 1,
+      "bandwith": 250,
+      "ip": {
+        "4": 1,
+        "6": 1
+      }
+    },
+    "price": 5.60,
+    "template": "Ubuntu 21.04"
+  }
 }
 ```
 
 This endpoint retrieves a specific kitten.
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-
 ### HTTP Request
 
-`GET http://example.com/kittens/<ID>`
+`POST https://api.harth-und-wolff.de/v1/kvm/order`
 
-### URL Parameters
+### Body Parameters
 
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to retrieve
+Parameter | Required | Description
+--------- | ----------- | -----------
+ram | Ja | Die Ram-Anzahl die du haben möchtest
+cores | Ja | Die Core-Anzahl die du haben möchtest
+storage | Ja | Der Speicher, den du haben möchtest
+traffic | Ja | The ID of the kitten to retrieve
+bandwith | Ja | The ID of the kitten to retrieve
+ipv4 | Ja | The ID of the kitten to retrieve
+ipv6 | Ja | The ID of the kitten to retrieve
 
 ## Delete a Server
 
 ```php
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.delete(2)
 ```
 
 ```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.delete(2)
 ```
 
 ```shell
-curl "http://example.com/api/kittens/2" \
-  -X DELETE \
-  -H "Authorization: meowmeowmeow"
 ```
 
 ```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.delete(2);
 ```
 
 > The above command returns JSON structured like this:
@@ -167,11 +157,11 @@ This endpoint deletes a specific kitten.
 
 ### HTTP Request
 
-`DELETE http://example.com/kittens/<ID>`
+`DELETE https://api.wolff-und-harth.de/v1/kvm/<id>/delete
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the kitten to delete
+ID | The ID of the KVM to delete
 
